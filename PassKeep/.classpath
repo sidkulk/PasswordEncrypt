@@ -6,7 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Languages/Java/Libraries/ApacheCommonsCodec/commons-codec-1.15/commons-codec-1.15.jar"/>
-	<classpathentry kind="lib" path="D:/Languages/Java/Libraries/sqlite-jdbc-3.7.2.jar"/>
+	<classpathentry kind="lib" path="E:/Development/Java/JARs/commons-codec-1.13.jar"/>
+	<classpathentry kind="lib" path="E:/Development/Java/JARs/sqlite-jdbc-3.8.11.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
