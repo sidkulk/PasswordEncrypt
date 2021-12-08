@@ -9,10 +9,8 @@ public class Main {
 		DBInit dbInit = new DBInit();
 		dbInit.connectToDatabase();
 		dbInit.createAllTables();
-		
+
 		LoginPane loginPane = new LoginPane();
 		loginPane.setVisible(true);
-		
-		//dbInit.closeAllConnections();
 	}
 }

@@ -58,7 +58,7 @@ public class LoginPane extends JFrame {
 	 */
 	public LoginPane() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 571, 656);
+		setBounds(100, 100, 513, 573);
 		setResizable(false);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -67,31 +67,31 @@ public class LoginPane extends JFrame {
 
 		JLabel lblNewLabel = new JLabel("User Login");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel.setBounds(195, 43, 167, 45);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel.setBounds(165, 11, 167, 45);
 		contentPane.add(lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("Username :");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 20));
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.BOLD, 15));
 		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setBounds(42, 170, 117, 36);
+		lblNewLabel_1.setBounds(10, 78, 117, 36);
 		contentPane.add(lblNewLabel_1);
 
 		usernameTxt = new JTextField();
-		usernameTxt.setFont(new Font("Tahoma", Font.BOLD, 20));
-		usernameTxt.setBounds(186, 170, 309, 36);
+		usernameTxt.setFont(new Font("Tahoma", Font.BOLD, 15));
+		usernameTxt.setBounds(137, 84, 324, 30);
 		contentPane.add(usernameTxt);
 		usernameTxt.setColumns(10);
 
 		JLabel lblNewLabel_1_1 = new JLabel("Password :");
 		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1_1.setBounds(42, 253, 117, 36);
+		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_1_1.setBounds(10, 145, 117, 36);
 		contentPane.add(lblNewLabel_1_1);
 
 		passwordTxt = new JPasswordField();
-		passwordTxt.setFont(new Font("Tahoma", Font.BOLD, 20));
-		passwordTxt.setBounds(186, 253, 309, 36);
+		passwordTxt.setFont(new Font("Tahoma", Font.BOLD, 15));
+		passwordTxt.setBounds(137, 149, 324, 30);
 		contentPane.add(passwordTxt);
 
 		JButton loginBtn = new JButton("LOGIN");
@@ -107,16 +107,16 @@ public class LoginPane extends JFrame {
 					if (currentLoggedInUser != null) {
 						dispose();
 						System.out.println("User login: " + currentLoggedInUser);
-//						HomePane homePane = new HomePane();
-//						homePane.setVisible(true);
+						HomePane homePane = new HomePane();
+						homePane.setVisible(true);
 					} else {
 						showMessageDialog(null, "User doesn't exists!", "ERROR", JOptionPane.ERROR_MESSAGE);
 					}
 				}
 			}
 		});
-		loginBtn.setFont(new Font("Tahoma", Font.BOLD, 20));
-		loginBtn.setBounds(195, 360, 166, 36);
+		loginBtn.setFont(new Font("Tahoma", Font.BOLD, 15));
+		loginBtn.setBounds(165, 233, 166, 36);
 		contentPane.add(loginBtn);
 
 		JButton registerBtn = new JButton("Register");
@@ -127,14 +127,32 @@ public class LoginPane extends JFrame {
 				registerPane.setVisible(true);
 			}
 		});
-		registerBtn.setFont(new Font("Tahoma", Font.BOLD, 20));
-		registerBtn.setBounds(195, 515, 166, 36);
+		registerBtn.setFont(new Font("Tahoma", Font.BOLD, 15));
+		registerBtn.setBounds(165, 345, 166, 36);
 		contentPane.add(registerBtn);
 
 		JLabel lblNewLabel_1_1_1 = new JLabel("New user? click on register");
 		lblNewLabel_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblNewLabel_1_1_1.setBounds(133, 451, 290, 36);
+		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_1_1_1.setBounds(103, 298, 290, 36);
 		contentPane.add(lblNewLabel_1_1_1);
+		
+		JButton accountRecoveryBtn = new JButton("Recover Account");
+		accountRecoveryBtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				RecoveryPane recoveryPane = new RecoveryPane();
+				dispose();
+				recoveryPane.setVisible(true);
+			}
+		});
+		accountRecoveryBtn.setFont(new Font("Tahoma", Font.BOLD, 15));
+		accountRecoveryBtn.setBounds(155, 453, 187, 36);
+		contentPane.add(accountRecoveryBtn);
+		
+		JLabel lblNewLabel_1_1_1_1 = new JLabel("OR");
+		lblNewLabel_1_1_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblNewLabel_1_1_1_1.setBounds(158, 412, 181, 30);
+		contentPane.add(lblNewLabel_1_1_1_1);
 	}
 }

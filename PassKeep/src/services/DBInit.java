@@ -14,7 +14,7 @@ public class DBInit implements DatabaseService {
 		try {
 			Class.forName("org.sqlite.JDBC");
 			connection = DriverManager.getConnection(URL);
-			System.out.println("Connection established!");
+//			System.out.println("Connection established!");
 			return true;
 		} catch (Exception e) {
 			System.out.println("Something went wrong! Stack trace: \n");
@@ -30,7 +30,7 @@ public class DBInit implements DatabaseService {
 			stmt.execute(TableClass.CREATE_USER_TAB_QUERY);
 			stmt.execute(TableClass.CREATE_PASS_TAB_QUERY);
 			//stmt.execute(TableClass.CREATE_USER_PASS_TAB_QUERY);
-			System.out.println("All tables created!");
+//			System.out.println("All tables created!");
 			return true;
 		} catch (Exception e) {
 			System.out.println("Error creating all tables!");

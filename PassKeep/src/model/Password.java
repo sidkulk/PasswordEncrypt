@@ -44,7 +44,7 @@ public class Password {
 
 	@Override
 	public String toString() {
-		return "Password [passwordTitle=" + passwordTitle + ", passwordValue=" + passwordValue + "]";
+		return "Password [p_id=" + p_id + ", passwordTitle=" + passwordTitle + ", passwordValue=" + passwordValue + "]";
 	}
 
 }
